@@ -30,6 +30,52 @@ let transformers = [
 ];
 
 // 一覧表示
+app.get("/starwars", (req, res) => {
+  res.render('starwars_list', { data: starwars });
+});
+
+// 詳細表示
+app.get("/starwars/:id", (req, res) => {
+  const i = req.params.id;
+  res.render('starwars_detail', { data: starwars[i] });
+});
+
+// 編集画面
+app.get("/starwars/edit/:id", (req, res) => {
+  const i = req.params.id;
+  res.render('starwars_edit', { data: starwars[i] });
+});
+
+// 更新処理
+app.post("/starwars/update/:id", (req, res) => {
+  const i = req.params.id;
+  starwars[i].name_en = req.body.name_en;
+  starwars[i].name_jp = req.body.name_jp;
+  starwars[i].type = req.body.type;
+  starwars[i].affiliation = req.body.affiliation;
+  starwars[i].appearance = req.body.appearance;
+  starwars[i].owners_pilots = req.body.owners_pilots;
+  res.redirect('/starwars');
+});
+
+// 追加処理
+app.get("/starwars_add", (req, res) => {
+  let newdata = {
+    id: starwars.length + 1,
+    name_en: req.query.name_en,
+    name_jp: req.query.name_jp,
+    type: req.query.type,
+    affiliation: req.query.affiliation,
+    appearance: req.query.appearance,
+    owners_pilots: req.query.owners_pilots
+  };
+  starwars.push(newdata);
+  res.redirect('/starwars');
+});
+
+
+
+// 一覧表示
 app.get("/cars", (req, res) => {
   res.render('cars_list', { data: cars });
 });
@@ -72,6 +118,52 @@ app.get("/cars_add", (req, res) => {
   cars.push(newdata);
   res.redirect('/cars');
 });
+
+
+// 一覧表示
+app.get("/transformers", (req, res) => {
+  res.render('tf_list', { data: transformers });
+});
+
+// 詳細表示
+app.get("/transformers/:id", (req, res) => {
+  const i = req.params.id;
+  res.render('tf_detail', { data: transformers[i] });
+});
+
+// 編集画面
+app.get("/transformers/edit/:id", (req, res) => {
+  const i = req.params.id;
+  res.render('tf_edit', { data: transformers[i] });
+});
+
+// 更新処理 (POSTメソッドを使用)
+app.post("/transformers/update/:id", (req, res) => {
+  const i = req.params.id;
+  transformers[i].name_en = req.body.name_en;
+  transformers[i].name_jp = req.body.name_jp;
+  transformers[i].faction = req.body.faction;
+  transformers[i].alt_mode = req.body.alt_mode;
+  transformers[i].appearance = req.body.appearance;
+  transformers[i].rank = req.body.rank;
+  res.redirect('/transformers');
+});
+
+// 追加処理 (GETメソッドのクエリパラメータを使用)
+app.get("/transformers_add", (req, res) => {
+  let newdata = {
+    id: transformers.length + 1,
+    name_en: req.query.name_en,
+    name_jp: req.query.name_jp,
+    faction: req.query.faction,
+    alt_mode: req.query.alt_mode,
+    appearance: req.query.appearance,
+    rank: req.query.rank
+  };
+  transformers.push(newdata);
+  res.redirect('/transformers');
+});
+
 
 app.listen(8080, () => console.log("Example app listening on port 8080!"));
 

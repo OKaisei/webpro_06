@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name_jp %>の編集</title>
+</head>
+<body>
+  <h2><%= data.name_jp %>の編集</h2>
+  <form action="/starwars/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>英語名</td><td><input type="text" name="name_en" value="<%= data.name_en %>"></td></tr>
+      <tr><td>日本語名</td><td><input type="text" name="name_jp" value="<%= data.name_jp %>"></td></tr>
+      <tr><td>種別</td><td><input type="text" name="type" value="<%= data.type %>"></td></tr>
+      <tr><td>所属</td><td><input type="text" name="affiliation" value="<%= data.affiliation %>"></td></tr>
+      <tr><td>初登場作品</td><td><input type="text" name="appearance" value="<%= data.appearance %>"></td></tr>
+      <tr><td>主な所有者</td><td><input type="text" name="owners_pilots" value="<%= data.owners_pilots %>"></td></tr>
+    </table>
+    <input type="submit" value="登録">
+  </form>
+  <br>
+  <a href="/starwars">一覧に戻る</a>
+</body>
+</html>
