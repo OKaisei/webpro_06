@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= data.name_jp %>の詳細</title>
+</head>
+<body>
+    <h2><%= data.name_jp %>の詳細情報</h2>
+    <table>
+        <tr><th>項目</th><th>データ</th></tr>
+        <tr><td>ID</td><td><%= data.id %></td></tr>
+        <tr><td>英語名</td><td><%= data.name_en %></td></tr>
+        <tr><td>日本語名</td><td><%= data.name_jp %></td></tr>
+        <tr><td>陣営</td><td><%= data.faction %></td></tr>
+        <tr><td>変形形態</td><td><%= data.alt_mode %></td></tr>
+        <tr><td>登場作品</td><td><%= data.appearance %></td></tr>
+        <tr><td>役職</td><td><%= data.rank %></td></tr>
+    </table>
+    <br>
+    <a href="/transformers">一覧に戻る</a>
+</body>
+</html>

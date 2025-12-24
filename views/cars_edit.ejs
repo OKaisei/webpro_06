@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= data.model_jp %>の編集</title>
+</head>
+<body>
+    <h2>車両データの編集</h2>
+    <form action="/cars/update/<%= data.id - 1 %>" method="POST">
+        <table>
+            <tr><td>メーカー</td><td><input type="text" name="manufacturer" value="<%= data.manufacturer %>"></td></tr>
+            <tr><td>モデル(英)</td><td><input type="text" name="model_en" value="<%= data.model_en %>"></td></tr>
+            <tr><td>モデル(日)</td><td><input type="text" name="model_jp" value="<%= data.model_jp %>"></td></tr>
+            <tr><td>ドライバー</td><td><input type="text" name="driver" value="<%= data.driver %>"></td></tr>
+            <tr><td>色</td><td><input type="text" name="color" value="<%= data.color %>"></td></tr>
+            <tr><td>登場作品</td><td><input type="text" name="appearance" value="<%= data.appearance %>"></td></tr>
+        </table>
+        <br>
+        <input type="submit" value="更新を保存">
+    </form>
+    <br>
+    <a href="/cars">一覧に戻る</a>
+</body>
+</html>

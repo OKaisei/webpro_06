@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>宇宙船を追加する</title>
+</head>
+<body>
+    <h2>新しい宇宙船の登録</h2>
+    <form action="/starwars_add">
+        <label>英語名: <input type="text" name="name_en" required></label><br>
+        <label>日本語名: <input type="text" name="name_jp" required></label><br>
+        <label>種別: <input type="text" name="type"></label><br>
+        <label>所属: <input type="text" name="affiliation"></label><br>
+        <label>登場作品: <input type="text" name="appearance"></label><br>
+        <label>パイロット: <input type="text" name="owners_pilots"></label><br>
+        <input type="submit" value="登録">
+    </form>
+    <br><a href="/starwars">一覧に戻る</a>
+</body>
+</html>

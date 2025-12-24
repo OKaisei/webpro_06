@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= data.model_jp %>の詳細</title>
+</head>
+<body>
+    <h2><%= data.manufacturer %> <%= data.model_jp %> の詳細情報</h2>
+    <table>
+        <tr><th>項目</th><th>データ</th></tr>
+        <tr><td>ID</td><td><%= data.id %></td></tr>
+        <tr><td>メーカー</td><td><%= data.manufacturer %></td></tr>
+        <tr><td>モデル(英)</td><td><%= data.model_en %></td></tr>
+        <tr><td>モデル(日)</td><td><%= data.model_jp %></td></tr>
+        <tr><td>ドライバー</td><td><%= data.driver %></td></tr>
+        <tr><td>色</td><td><%= data.color %></td></tr>
+        <tr><td>登場作品</td><td><%= data.appearance %></td></tr>
+    </table>
+    <br>
+    <a href="/cars">一覧に戻る</a>
+</body>
+</html>

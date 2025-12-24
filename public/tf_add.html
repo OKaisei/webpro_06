@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>トランスフォーマーを追加する</title>
+</head>
+<body>
+    <h2>新しいトランスフォーマーの登録</h2>
+    <form action="/transformers_add">
+        <label>英語名: <input type="text" name="name_en" required></label><br>
+        <label>日本語名: <input type="text" name="name_jp" required></label><br>
+        <label>陣営: <input type="text" name="faction"></label><br>
+        <label>変形形態: <input type="text" name="alt_mode"></label><br>
+        <label>初登場作品: <input type="text" name="appearance"></label><br>
+        <label>役職: <input type="text" name="rank"></label><br>
+        <input type="submit" value="登録">
+    </form>
+    <br><a href="/transformers">一覧に戻る</a>
+</body>
+</html>

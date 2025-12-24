@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>車を追加する</title>
+</head>
+<body>
+    <h2>新しい車の登録</h2>
+    <form action="/cars_add">
+        <label>メーカー: <input type="text" name="manufacturer" required></label><br>
+        <label>モデル(英): <input type="text" name="model_en" required></label><br>
+        <label>モデル(日): <input type="text" name="model_jp" required></label><br>
+        <label>ドライバー: <input type="text" name="driver"></label><br>
+        <label>色: <input type="text" name="color"></label><br>
+        <label>登場作品: <input type="text" name="appearance"></label><br>
+        <input type="submit" value="登録">
+    </form>
+    <br><a href="/cars">一覧に戻る</a>
+</body>
+</html>
