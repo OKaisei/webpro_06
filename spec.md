@@ -12,7 +12,7 @@
 データ | 書式 | 例 
 -|-|-
 船名(英名) | name_en | Millennium Falcon 
-船名(日本語) | ame_jp | ミレニアム・ファルコン 
+船名(日本語) | name_jp | ミレニアム・ファルコン 
 タイプ | type | 軽貨物船（改造型）
 所属 | affiliation | 反乱軍", "レジスタンス
 登場作品 | appearance | Episode IV: A New Hope
