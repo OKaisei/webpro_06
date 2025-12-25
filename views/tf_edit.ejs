@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= data.name_jp %> の編集</title>
+</head>
+<body>
+    <h2>トランスフォーマー データの編集</h2>
+    <form action="/transformers/update/<%= data.id - 1 %>" method="POST">
+        <table>
+            <tr><td>英語名</td><td><input type="text" name="name_en" value="<%= data.name_en %>" required></td></tr>
+            <tr><td>日本語名</td><td><input type="text" name="name_jp" value="<%= data.name_jp %>" required></td></tr>
+            <tr><td>陣営</td><td><input type="text" name="faction" value="<%= data.faction %>"></td></tr>
+            <tr><td>変形形態</td><td><input type="text" name="alt_mode" value="<%= data.alt_mode %>"></td></tr>
+            <tr><td>初登場作品</td><td><input type="text" name="appearance" value="<%= data.appearance %>"></td></tr>
+            <tr><td>役職</td><td><input type="text" name="rank" value="<%= data.rank %>"></td></tr>
+        </table>
+        <br>
+        <input type="submit" value="更新を保存">
+    </form>
+    <br>
+    <a href="/transformers">一覧に戻る</a>
+</body>
+</html>

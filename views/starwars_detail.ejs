@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= data.name_jp %>の詳細</title>
+</head>
+<body>
+    <h2><%= data.name_jp %> の詳細情報</h2>
+    <table>
+        <tr><th>項目</th><th>データ</th></tr>
+        <tr><td>ID</td><td><%= data.id %></td></tr>
+        <tr><td>英語名</td><td><%= data.name_en %></td></tr>
+        <tr><td>日本語名</td><td><%= data.name_jp %></td></tr>
+        <tr><td>船体種別</td><td><%= data.type %></td></tr>
+        <tr><td>所属勢力</td><td><%= data.affiliation %></td></tr>
+        <tr><td>初登場作品</td><td><%= data.appearance %></td></tr>
+        <tr><td>主な所有者・パイロット</td><td><%= data.owners_pilots %></td></tr>
+    </table>
+    <br>
+    <a href="/starwars">一覧に戻る</a>
+    <br><br>
+    <a href="/starwars/edit/<%= data.id - 1 %>">このデータを編集する</a>
+</body>
+</html>
