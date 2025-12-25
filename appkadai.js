@@ -74,6 +74,13 @@ app.get("/starwars_add", (req, res) => {
   res.redirect('/starwars');
 });
 
+// 削除処理
+app.get("/starwars/delete/:id", (req, res) => {
+  const i = req.params.id;
+  starwars.splice(req.params.number, 1);
+  res.redirect('/starwars');
+});
+
 
 
 // 一覧表示
@@ -120,6 +127,13 @@ app.get("/cars_add", (req, res) => {
   res.redirect('/cars');
 });
 
+// 削除処理
+app.get("/cars/delete/:id", (req, res) => {
+  const i = req.params.id;
+  cars.splice(req.params.number, 1);
+  res.redirect('/cars');
+});
+
 
 // 一覧表示
 app.get("/transformers", (req, res) => {
@@ -162,6 +176,13 @@ app.get("/transformers_add", (req, res) => {
     rank: req.query.rank
   };
   transformers.push(newdata);
+  res.redirect('/transformers');
+});
+
+// 削除処理
+app.get("/transformers/delete/:id", (req, res) => {
+  const i = req.params.id;
+  transformers.splice(req.params.number, 1);
   res.redirect('/transformers');
 });
 

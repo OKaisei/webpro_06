@@ -7,7 +7,7 @@
 <body>
     <h2>車両一覧</h2>
     <table>
-        <tr><th>ID</th><th>メーカー</th><th>モデル名</th><th>詳細</th><th>編集</th></tr>
+        <tr><th>ID</th><th>メーカー</th><th>モデル名</th><th>詳細</th><th>編集</th><th>削除</th></tr>
         <% let i = 0; %>
         <% for( let row of data ) { %>
         <tr>
@@ -16,11 +16,12 @@
             <td><%= row.model_jp %></td>
             <td><a href="/cars/<%= i %>">詳細</a></td>
             <td><a href="/cars/edit/<%= i %>">編集</a></td>
+            <td><a href="/cars/delete/<%= i %>" onclick="return confirm('本当に削除しますか？');">削除</a></td>
         </tr>
         <% i++; %>
         <% } %>
     </table>
     <br>
-    <a href="/public/cars_add.html">新規車両の登録はこちら</a>
+    <a href="/public/cars_add.html">新規追加はこちら</a>
 </body>
 </html>
