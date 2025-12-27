@@ -77,7 +77,7 @@ app.get("/starwars_add", (req, res) => {
 // 削除処理
 app.get("/starwars/delete/:id", (req, res) => {
   const i = req.params.id;
-  starwars.splice(req.params.number, 1);
+  starwars.splice(i, 1);
   res.redirect('/starwars');
 });
 
@@ -130,7 +130,7 @@ app.get("/cars_add", (req, res) => {
 // 削除処理
 app.get("/cars/delete/:id", (req, res) => {
   const i = req.params.id;
-  cars.splice(req.params.number, 1);
+  cars.splice(i, 1);
   res.redirect('/cars');
 });
 
@@ -182,7 +182,7 @@ app.get("/transformers_add", (req, res) => {
 // 削除処理
 app.get("/transformers/delete/:id", (req, res) => {
   const i = req.params.id;
-  transformers.splice(req.params.number, 1);
+  transformers.splice(i, 1);
   res.redirect('/transformers');
 });
 
